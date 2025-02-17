@@ -25,7 +25,7 @@ class ViewAction extends BaseViewAction
 
         $this->modalFooterActions(
             fn (ViewAction $action, FullCalendarWidget $livewire) => [
-//                ...$livewire->getCachedModalActions(),
+                ...$livewire->getCachedModalActions(),
                 $action->getModalCancelAction(),
             ]
         );
