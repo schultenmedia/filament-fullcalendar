@@ -1,10 +1,10 @@
 # Filament FullCalendar
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/saade/filament-fullcalendar.svg?style=flat-square)](https://packagist.org/packages/saade/filament-fullcalendar)
-[![Total Downloads](https://img.shields.io/packagist/dt/saade/filament-fullcalendar.svg?style=flat-square)](https://packagist.org/packages/saade/filament-fullcalendar)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/schultenmedia/filament-fullcalendar.svg?style=flat-square)](https://packagist.org/packages/schultenmedia/filament-fullcalendar)
+[![Total Downloads](https://img.shields.io/packagist/dt/schultenmedia/filament-fullcalendar.svg?style=flat-square)](https://packagist.org/packages/schultenmedia/filament-fullcalendar)
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/saade/filament-fullcalendar/3.x/art/cover.png" alt="Filament FullCalendar" style="width: 100%; max-width: 800px; border-radius: 10px" />
+    <img src="https://raw.githubusercontent.com/schultenmedia/filament-fullcalendar/3.x/art/cover.png" alt="Filament FullCalendar" style="width: 100%; max-width: 800px; border-radius: 10px" />
 </p>
 
 # Features
@@ -59,7 +59,7 @@
 You can install the package via composer:
 
 ```bash
-composer require saade/filament-fullcalendar:^3.0
+composer require schultenmedia/filament-fullcalendar:^3.0
 ```
 
 <br>
@@ -76,7 +76,7 @@ php artisan make:filament-widget CalendarWidget
 
 <br>
 
-1. Your newly created widget should extends the `Saade\FilamentFullCalendar\Widgets\FullCalendarWidget` class of this package
+1. Your newly created widget should extends the `SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget` class of this package
 
 > **Warning**
 >
@@ -88,7 +88,7 @@ Your widget should look like this:
 
 namespace App\Filament\Widgets;
 
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 
 class CalendarWidget extends FullCalendarWidget
 {
@@ -99,8 +99,8 @@ class CalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $fetchInfo): array
     {
         // You can use $fetchInfo to filter events by date.
-        // This method should return an array of event-like objects. See: https://github.com/saade/filament-fullcalendar/blob/3.x/#returning-events
-        // You can also return an array of EventData objects. See: https://github.com/saade/filament-fullcalendar/blob/3.x/#the-eventdata-class
+        // This method should return an array of event-like objects. See: https://github.com/schultenmedia/filament-fullcalendar/blob/3.x/#returning-events
+        // You can also return an array of EventData objects. See: https://github.com/schultenmedia/filament-fullcalendar/blob/3.x/#the-eventdata-class
         return [];
     }
 }
@@ -115,7 +115,7 @@ The `fetchEvents` method should return an array of event-like objects. See: [Ful
 
 namespace App\Filament\Widgets;
 
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use App\Filament\Resources\EventResource;
 use App\Models\Event;
 
@@ -146,14 +146,14 @@ class CalendarWidget extends FullCalendarWidget
 
 ## The EventData class
 
-If you want a fluent way to return events, you can use the `Saade\FilamentFullCalendar\Data\EventData` class.
+If you want a fluent way to return events, you can use the `SchultenMedia\FilamentFullCalendar\Data\EventData` class.
 
 ```php
 <?php
 
 namespace App\Filament\Widgets;
 
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use App\Filament\Resources\EventResource;
 use App\Models\Event;
 
@@ -195,7 +195,7 @@ namespace App\Providers\Filament;
 
 use Filament\Panel;
 use Filament\PanelProvider;
-use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
+use SchultenMedia\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -224,7 +224,7 @@ class AdminPanelProvider extends PanelProvider
 <?php
 namespace App\Filament\Widgets;
 
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use App\Models\Event;
 
 class CalendarWidget extends FullCalendarWidget
@@ -297,7 +297,7 @@ To get started, you'll need to tell the widget which model it should use to perf
 
 namespace App\Filament\Widgets;
 
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use App\Models\Event;
 
 class CalendarWidget extends FullCalendarWidget
@@ -334,8 +334,8 @@ If you want to customize the actions, you can override the default actions that 
 
 namespace App\Filament\Widgets;
 
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-use Saade\FilamentFullCalendar\Actions;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Actions;
 use App\Models\Event;
 
 class CalendarWidget extends FullCalendarWidget
@@ -391,7 +391,7 @@ If you want to intercept events, you can override the default methods that comes
 > **Warning**
 > If you override any of the methods below, you'll need to call the parent method to keep the calendar working as expected.
 
-See the [InteractsWithEvents](https://github.com/saade/filament-fullcalendar/blob/3.x/src/Widgets/Concerns/InteractsWithEvents.php) for all the available event listeners.
+See the [InteractsWithEvents](https://github.com/schultenmedia/filament-fullcalendar/blob/3.x/src/Widgets/Concerns/InteractsWithEvents.php) for all the available event listeners.
 
 <br>
 
@@ -445,7 +445,7 @@ protected function modalActions(): array
 You can fill the form with the selected day's date by using the `mountUsing` method on the `CreateAction`.
 
 ```php
-use Saade\FilamentFullCalendar\Actions\CreateAction;
+use SchultenMedia\FilamentFullCalendar\Actions\CreateAction;
 
 protected function headerActions(): array
  {
@@ -524,7 +524,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 # Credits
 
--   [Saade](https://github.com/saade)
+-   [SchultenMedia](https://github.com/schultenmedia)
 -   [All Contributors](../../contributors)
 
 # License
@@ -532,7 +532,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 <p align="center">
-    <a href="https://github.com/sponsors/saade">
-        <img src="https://raw.githubusercontent.com/saade/filament-fullcalendar/3.x/art/sponsor.png" alt="Sponsor Saade" style="width: 100%; max-width: 800px;" />
+    <a href="https://github.com/sponsors/schultenmedia">
+        <img src="https://raw.githubusercontent.com/schultenmedia/filament-fullcalendar/3.x/art/sponsor.png" alt="Sponsor SchultenMedia" style="width: 100%; max-width: 800px;" />
     </a>
 </p>

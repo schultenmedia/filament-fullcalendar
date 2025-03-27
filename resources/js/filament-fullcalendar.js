@@ -34,9 +34,9 @@ export default function fullcalendar({
             /** @type Calendar */
             const calendar = new Calendar(this.$el, {
                 headerToolbar: {
-                    'left': 'prev,next today',
-                    'center': 'title',
-                    'right': 'dayGridMonth,dayGridWeek,dayGridDay',
+                    'left': '',
+                    'center': '',
+                    'right': '',
                 },
                 plugins: plugins.map(plugin => availablePlugins[plugin]),
                 locale,
@@ -94,8 +94,21 @@ export default function fullcalendar({
             window.addEventListener('filament-fullcalendar--refresh', () => calendar.refetchEvents())
             window.addEventListener('filament-fullcalendar--prev', () => calendar.prev())
             window.addEventListener('filament-fullcalendar--next', () => calendar.next())
-            window.addEventListener('filament-fullcalendar--today', () => calendar.today())
+            // window.addEventListener('filament-fullcalendar--today', () => calendar.today())
             window.addEventListener('filament-fullcalendar--goto', (event) => calendar.gotoDate(event.detail.date))
+            window.addEventListener('filament-fullcalendar--view', (event) => {
+                console.log('filament-fullcalendar--view')
+                // The view name is directly in the detail property
+                const viewName = event.detail;
+                if (viewName) {
+                    calendar.changeView(viewName);
+                }
+            });
+            window.addEventListener('filament-fullcalendar--today', () =>  {
+
+                calendar.changeView('timeGridDay');
+            })
+
         },
     }
 }

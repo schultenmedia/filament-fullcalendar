@@ -1,9 +1,9 @@
 <?php
 
-namespace Saade\FilamentFullCalendar\Actions;
+namespace SchultenMedia\FilamentFullCalendar\Actions;
 
 use Filament\Actions\CreateAction as BaseCreateAction;
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 
 class CreateAction extends BaseCreateAction
 {
