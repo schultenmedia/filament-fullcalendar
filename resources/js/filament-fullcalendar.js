@@ -98,8 +98,7 @@ export default function fullcalendar({
             window.addEventListener('filament-fullcalendar--goto', (event) => calendar.gotoDate(event.detail.date))
             window.addEventListener('filament-fullcalendar--view', (event) => {
                 // The view name is directly in the detail property
-                const viewName = event.detail;
-                console.log('filament-fullcalendar--view', event, viewName)
+                const viewName = event.detail.view;
                 if (viewName) {
                     calendar.changeView(viewName);
                 }
