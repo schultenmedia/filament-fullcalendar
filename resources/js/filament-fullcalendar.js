@@ -17,18 +17,18 @@ import momentTimezonePlugin from '@fullcalendar/moment-timezone'
 import locales from '@fullcalendar/core/locales-all'
 
 export default function fullcalendar({
-    locale,
-    plugins,
-    schedulerLicenseKey,
-    timeZone,
-    config,
-    editable,
-    selectable,
-    eventClassNames,
-    eventContent,
-    eventDidMount,
-    eventWillUnmount,
-}) {
+                                         locale,
+                                         plugins,
+                                         schedulerLicenseKey,
+                                         timeZone,
+                                         config,
+                                         editable,
+                                         selectable,
+                                         eventClassNames,
+                                         eventContent,
+                                         eventDidMount,
+                                         eventWillUnmount,
+                                     }) {
     return {
         init() {
             /** @type Calendar */
@@ -97,9 +97,9 @@ export default function fullcalendar({
             // window.addEventListener('filament-fullcalendar--today', () => calendar.today())
             window.addEventListener('filament-fullcalendar--goto', (event) => calendar.gotoDate(event.detail.date))
             window.addEventListener('filament-fullcalendar--view', (event) => {
-                console.log('filament-fullcalendar--view')
                 // The view name is directly in the detail property
                 const viewName = event.detail;
+                console.log('filament-fullcalendar--view', event, viewName)
                 if (viewName) {
                     calendar.changeView(viewName);
                 }
