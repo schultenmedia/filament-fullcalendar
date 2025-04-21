@@ -87,6 +87,14 @@ export default function fullcalendar({
                     if (!selectable) return;
                     this.$wire.onDateSelect(startStr, endStr, allDay, view, resource)
                 },
+                datesSet: (info) => {
+                    // Dispatch an event to Livewire with the current date and view
+                    this.$wire.dispatch('filament-fullcalendar--dateSet', {
+                        date: info.start.toISOString(),
+                        view: info.view.type
+                    });
+                },
+
             })
 
             calendar.render()
@@ -104,8 +112,8 @@ export default function fullcalendar({
                 }
             });
             window.addEventListener('filament-fullcalendar--today', () =>  {
-
                 calendar.changeView('timeGridDay');
+                calendar.gotoDate(new Date());
             })
 
         },
