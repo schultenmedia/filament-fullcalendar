@@ -2,6 +2,15 @@
 
 All notable changes to `filament-fullcalendar` will be documented in this file.
 
+## 2026-04-14
+
+- [completed] Upgraded to upstream saade/filament-fullcalendar v4.0.0-beta6 (Filament 4 & 5 support, PHP ^8.2, Laravel 10–13)
+- [completed] Switched build pipeline from esbuild (bin/build.js) to Vite (vite.config.js); dist moved from `dist/` to `resources/dist/`
+- [completed] Preserved SchultenMedia namespace and `schultenmedia/filament-fullcalendar` asset package name
+- [completed] Reapplied custom JS: empty `headerToolbar`, `datesSet` → `filament-fullcalendar--dateSet` Livewire dispatch, `--today` event switches to `timeGridDay` and jumps to today
+- [completed] npm clean-install under Tailwind 4 / Vite 7 — 0 vulnerabilities
+- [completed] Verified installation against filament/filament v5.5.1
+
 ## v1.9.2 - 2023-07-11
 
 **Full Changelog**: https://github.com/schultenmedia/filament-fullcalendar/compare/v1.9.1...v1.9.2

@@ -5,12 +5,11 @@
 <x-filament-widgets::widget>
     <x-filament::section>
         <div class="flex justify-end flex-1 mb-4">
-            <x-filament-actions::actions :actions="$this->getCachedHeaderActions()" class="shrink-0" />
+            <x-filament::actions :actions="$this->getCachedHeaderActions()" class="shrink-0" />
         </div>
 
-        <div class="filament-fullcalendar" wire:ignore ax-load
-            ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-fullcalendar-alpine', 'schultenmedia/filament-fullcalendar') }}"
-            ax-load-css="{{ \Filament\Support\Facades\FilamentAsset::getStyleHref('filament-fullcalendar-styles', 'schultenmedia/filament-fullcalendar') }}"
+        <div wire:ignore x-load
+            x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-fullcalendar-alpine', 'schultenmedia/filament-fullcalendar') }}"
             x-ignore x-data="fullcalendar({
                 locale: @js($plugin->getLocale()),
                 plugins: @js($plugin->getPlugins()),
@@ -23,8 +22,7 @@
                 eventContent: {!! htmlspecialchars($this->eventContent(), ENT_COMPAT) !!},
                 eventDidMount: {!! htmlspecialchars($this->eventDidMount(), ENT_COMPAT) !!},
                 eventWillUnmount: {!! htmlspecialchars($this->eventWillUnmount(), ENT_COMPAT) !!},
-            })">
-        </div>
+            })" class="filament-fullcalendar"></div>
     </x-filament::section>
 
     <x-filament-actions::modals />
