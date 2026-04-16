@@ -33,7 +33,7 @@
     --fc-today-bg-color: rgba(255, 220, 40, 0.15);
     --fc-now-indicator-color: red;
 
-    --fc-list-event-hover-bg-color: rgba(var(--gray-50), var(--tw-bg-opacity));
+    --fc-list-event-hover-bg-color: var(--color-gray-50, #f9fafb);
 }
 
 .fc-daygrid-day-events {
@@ -42,20 +42,20 @@
 }
 
 html.dark .filament-fullcalendar {
-    --fc-neutral-bg-color: rgba(var(--gray-800), .8);
-    --fc-border-color: rgba(var(--gray-700), .5);
+    --fc-neutral-bg-color: color-mix(in srgb, var(--color-gray-800, #1f2937) 80%, transparent);
+    --fc-border-color: color-mix(in srgb, var(--color-gray-700, #374151) 50%, transparent);
 
-    --fc-button-bg-color: rgba(var(--primary-500));
-    --fc-button-border-color: rgba(var(--primary-600));
-    --fc-button-hover-bg-color: rgba(var(--primary-400));
-    --fc-button-hover-border-color: rgba(var(--primary-500));
-    --fc-button-active-bg-color: rgba(var(--primary-400));
-    --fc-button-active-border-color: rgba(var(--primary-500));
+    --fc-button-bg-color: var(--color-primary-500, #A020F0);
+    --fc-button-border-color: var(--color-primary-600, #820ECA);
+    --fc-button-hover-bg-color: var(--color-primary-400, #B046F3);
+    --fc-button-hover-border-color: var(--color-primary-500, #A020F0);
+    --fc-button-active-bg-color: var(--color-primary-400, #B046F3);
+    --fc-button-active-border-color: var(--color-primary-500, #A020F0);
 
-    --fc-event-bg-color: rgba(var(--primary-500));
-    --fc-event-border-color: rgba(var(--primary-600));
+    --fc-event-bg-color: var(--color-primary-500, #A020F0);
+    --fc-event-border-color: var(--color-primary-600, #820ECA);
 
-    --fc-list-event-hover-bg-color: rgba(var(--gray-800), .8);
+    --fc-list-event-hover-bg-color: color-mix(in srgb, var(--color-gray-800, #1f2937) 80%, transparent);
 }
 
 .filament-fullcalendar .fc-toolbar-chunk {
