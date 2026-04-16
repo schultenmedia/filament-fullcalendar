@@ -19506,6 +19506,11 @@ function MR({
     calendar: null,
     init() {
       this.calendar = new S3(this.$el, {
+        headerToolbar: {
+          left: "",
+          center: "",
+          right: ""
+        },
         plugins: e.map((a) => tR[a]),
         locale: t,
         ...o && { schedulerLicenseKey: o },
@@ -19588,6 +19593,12 @@ function MR({
             d,
             A
           );
+        },
+        datesSet: (a) => {
+          this.$wire.dispatch("filament-fullcalendar--dateSet", {
+            date: a.start.toISOString(),
+            view: a.view.type
+          });
         }
       }), this.calendar.render(), window.addEventListener(
         "filament-fullcalendar--refresh",
@@ -19598,13 +19609,12 @@ function MR({
       ), window.addEventListener(
         "filament-fullcalendar--next",
         () => this.calendar.next()
-      ), window.addEventListener(
-        "filament-fullcalendar--today",
-        () => this.calendar.today()
-      ), window.addEventListener(
-        "filament-fullcalendar--view",
-        (a) => this.calendar.changeView(a.detail.view)
-      ), window.addEventListener(
+      ), window.addEventListener("filament-fullcalendar--today", () => {
+        this.calendar.changeView("timeGridDay"), this.calendar.gotoDate(/* @__PURE__ */ new Date());
+      }), window.addEventListener("filament-fullcalendar--view", (a) => {
+        const s = a.detail.view;
+        s && this.calendar.changeView(s);
+      }), window.addEventListener(
         "filament-fullcalendar--goto",
         (a) => this.calendar.gotoDate(a.detail.date)
       );

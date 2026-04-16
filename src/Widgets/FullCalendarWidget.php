@@ -1,6 +1,6 @@
 <?php
 
-namespace Saade\FilamentFullCalendar\Widgets;
+namespace SchultenMedia\FilamentFullCalendar\Widgets;
 
 use Filament\Actions\Action;
 use Filament\Actions\Concerns\InteractsWithActions;
@@ -10,7 +10,7 @@ use Filament\Forms\Contracts\HasForms;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\Concerns\InteractsWithHeaderActions;
 use Filament\Widgets\Widget;
-use Saade\FilamentFullCalendar\Actions;
+use SchultenMedia\FilamentFullCalendar\Actions;
 
 class FullCalendarWidget extends Widget implements HasForms, HasActions
 {

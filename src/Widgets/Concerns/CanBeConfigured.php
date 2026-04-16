@@ -1,10 +1,10 @@
 <?php
 
-namespace Saade\FilamentFullCalendar\Widgets\Concerns;
+namespace SchultenMedia\FilamentFullCalendar\Widgets\Concerns;
 
-use function Saade\FilamentFullCalendar\array_merge_recursive_unique;
+use function SchultenMedia\FilamentFullCalendar\array_merge_recursive_unique;
 
-use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
+use SchultenMedia\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
 trait CanBeConfigured
 {

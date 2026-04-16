@@ -1,6 +1,6 @@
 <?php
 
-namespace Saade\FilamentFullCalendar;
+namespace SchultenMedia\FilamentFullCalendar;
 
 use Closure;
 use Filament\Contracts\Plugin;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Saade\FilamentFullCalendar\Actions;
+namespace SchultenMedia\FilamentFullCalendar\Actions;
 
 use Filament\Actions\ViewAction as BaseViewAction;
-use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
+use SchultenMedia\FilamentFullCalendar\Widgets\FullCalendarWidget;
 
 class ViewAction extends BaseViewAction
 {
@@ -26,7 +26,6 @@ class ViewAction extends BaseViewAction
         $this->modalFooterActions(
             fn (ViewAction $action, FullCalendarWidget $livewire) => [
                 ...$livewire->getCachedFormActions(),
-                $action->getModalCancelAction(),
             ]
         );
 

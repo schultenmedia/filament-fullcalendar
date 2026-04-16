@@ -1,17 +1,17 @@
 {
-    "name": "saade/filament-fullcalendar",
-    "description": "The Most Popular JavaScript Calendar integrated with Filament 💛",
+    "name": "schultenmedia/filament-fullcalendar",
+    "description": "The Most Popular JavaScript Calendar integrated with Filament",
     "keywords": [
-        "saade",
+        "schultenmedia",
         "laravel",
         "filament-fullcalendar"
     ],
-    "homepage": "https://github.com/saade/filament-fullcalendar",
+    "homepage": "https://github.com/schultenmedia/filament-fullcalendar",
     "license": "MIT",
     "authors": [
         {
-            "name": "Saade",
-            "email": "saade@outlook.com.br",
+            "name": "SchultenMedia",
+            "email": "schultenmedia@outlook.com.br",
             "role": "Developer"
         }
     ],
@@ -34,7 +34,7 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Saade\\FilamentFullCalendar\\": "src"
+            "SchultenMedia\\FilamentFullCalendar\\": "src"
         }
     },
     "scripts": {
@@ -51,7 +51,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Saade\\FilamentFullCalendar\\FilamentFullCalendarServiceProvider"
+                "SchultenMedia\\FilamentFullCalendar\\FilamentFullCalendarServiceProvider"
             ]
         }
     },

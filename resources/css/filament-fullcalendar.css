@@ -1,57 +1,69 @@
 .filament-fullcalendar {
-    /* UI */
-    --fc-small-font-size: var(--text-sm);
+    font-size: 13px;
+    --fc-small-font-size: 12px;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+    --fc-neutral-text-color: #808080;
+    --fc-border-color: #ddd;
 
-    --fc-border-color: color-mix(
-        in oklab,
-        var(--color-gray-950) 10%,
-        transparent
-    );
+    --fc-button-text-color: #fff;
+    --fc-button-bg-color: #2C3E50;
+    --fc-button-border-color: #2C3E50;
+    --fc-button-hover-bg-color: #1e2b37;
+    --fc-button-hover-border-color: #1a252f;
+    --fc-button-active-bg-color: #1a252f;
+    --fc-button-active-border-color: #151e27;
 
-    --fc-highlight-color: color-mix(
-        in oklab,
-        var(--primary-500) 5%,
-        transparent
-    );
+    --fc-event-bg-color: transparent;
+    --fc-event-border-color: #3788d8;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
 
-    --fc-today-bg-color: color-mix(
-        in oklab,
-        var(--primary-500) 5%,
-        transparent
-    );
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
 
-    /* Buttons */
-    --fc-button-text-color: var(--primary-900);
-    --fc-button-bg-color: var(--primary-400);
-    --fc-button-border-color: transparent;
-    --fc-button-hover-bg-color: var(--primary-300);
-    --fc-button-hover-border-color: transparent;
-    --fc-button-active-bg-color: var(--primary-300);
-    --fc-button-active-border-color: transparent;
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
 
-    /* Events */
-    --fc-event-bg-color: var(--primary-400);
-    --fc-event-border-color: var(--primary-400);
-    --fc-event-text-color: var(--primary-900);
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+    --fc-now-indicator-color: red;
+
+    --fc-list-event-hover-bg-color: rgba(var(--gray-50), var(--tw-bg-opacity));
+}
+
+.fc-daygrid-day-events {
+    margin-left: 4px !important;
+    margin-right: 4px !important;
 }
 
 html.dark .filament-fullcalendar {
-    /* UI */
-    --fc-border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    --fc-neutral-bg-color: rgba(var(--gray-800), .8);
+    --fc-border-color: rgba(var(--gray-700), .5);
 
-    /* Buttons */
-    --fc-button-text-color: var(--primary-950);
-    --fc-button-bg-color: var(--primary-600);
-    --fc-button-border-color: transparent;
-    --fc-button-hover-bg-color: var(--primary-500);
-    --fc-button-hover-border-color: transparent;
-    --fc-button-active-bg-color: var(--primary-500);
-    --fc-button-active-border-color: transparent;
+    --fc-button-bg-color: rgba(var(--primary-500));
+    --fc-button-border-color: rgba(var(--primary-600));
+    --fc-button-hover-bg-color: rgba(var(--primary-400));
+    --fc-button-hover-border-color: rgba(var(--primary-500));
+    --fc-button-active-bg-color: rgba(var(--primary-400));
+    --fc-button-active-border-color: rgba(var(--primary-500));
 
-    /* Events */
-    --fc-event-bg-color: var(--primary-600);
-    --fc-event-border-color: var(--primary-600);
-    --fc-event-text-color: var(--primary-950);
+    --fc-event-bg-color: rgba(var(--primary-500));
+    --fc-event-border-color: rgba(var(--primary-600));
+
+    --fc-list-event-hover-bg-color: rgba(var(--gray-800), .8);
+}
+
+.filament-fullcalendar .fc-toolbar-chunk {
+    @apply space-y-1;
+}
+
+.filament-fullcalendar .fc-toolbar-title {
+    @apply text-lg font-semibold;
 }
 
 .filament-fullcalendar .fc-button {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Saade\FilamentFullCalendar\Widgets\Concerns;
+namespace SchultenMedia\FilamentFullCalendar\Widgets\Concerns;
 
 use function Filament\Support\get_model_label;
 

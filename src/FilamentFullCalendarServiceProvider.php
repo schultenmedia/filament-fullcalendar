@@ -1,6 +1,6 @@
 <?php
 
-namespace Saade\FilamentFullCalendar;
+namespace SchultenMedia\FilamentFullCalendar;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Facades\FilamentAsset;
@@ -30,7 +30,7 @@ class FilamentFullCalendarServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'saade/filament-fullcalendar';
+        return 'schultenmedia/filament-fullcalendar';
     }
 
     /**

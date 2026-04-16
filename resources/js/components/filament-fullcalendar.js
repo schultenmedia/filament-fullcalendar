@@ -20,6 +20,11 @@ export default function fullcalendar({
 
         init() {
             this.calendar = new Calendar(this.$el, {
+                headerToolbar: {
+                    'left': '',
+                    'center': '',
+                    'right': '',
+                },
                 plugins: plugins.map((plugin) => availablePlugins[plugin]),
                 locale,
                 ...(schedulerLicenseKey && { schedulerLicenseKey }),
@@ -125,6 +130,12 @@ export default function fullcalendar({
                         resource,
                     )
                 },
+                datesSet: (info) => {
+                    this.$wire.dispatch('filament-fullcalendar--dateSet', {
+                        date: info.start.toISOString(),
+                        view: info.view.type
+                    });
+                },
             })
 
             this.calendar.render()
@@ -141,13 +152,17 @@ export default function fullcalendar({
                 this.calendar.next(),
             )
 
-            window.addEventListener('filament-fullcalendar--today', () =>
-                this.calendar.today(),
-            )
+            window.addEventListener('filament-fullcalendar--today', () => {
+                this.calendar.changeView('timeGridDay');
+                this.calendar.gotoDate(new Date());
+            })
 
-            window.addEventListener('filament-fullcalendar--view', (event) =>
-                this.calendar.changeView(event.detail.view),
-            )
+            window.addEventListener('filament-fullcalendar--view', (event) => {
+                const viewName = event.detail.view;
+                if (viewName) {
+                    this.calendar.changeView(viewName);
+                }
+            })
 
             window.addEventListener('filament-fullcalendar--goto', (event) =>
                 this.calendar.gotoDate(event.detail.date),

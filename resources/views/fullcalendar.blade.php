@@ -1,5 +1,5 @@
 @php
-    $plugin = \Saade\FilamentFullCalendar\FilamentFullCalendarPlugin::get();
+    $plugin = \SchultenMedia\FilamentFullCalendar\FilamentFullCalendarPlugin::get();
 @endphp
 
 <x-filament-widgets::widget>
@@ -9,7 +9,7 @@
         </div>
 
         <div wire:ignore x-load
-            x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-fullcalendar-alpine', 'saade/filament-fullcalendar') }}"
+            x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-fullcalendar-alpine', 'schultenmedia/filament-fullcalendar') }}"
             x-ignore x-data="fullcalendar({
                 locale: @js($plugin->getLocale()),
                 plugins: @js($plugin->getPlugins()),
